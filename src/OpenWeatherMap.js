@@ -15,7 +15,7 @@ const OpenWeatherMap = ({ data }) => {
         <div className="icon">
           <img src={src} alt={weather.weather[0].description} />
         </div>
-        <div className="temperature">{weather.main.temp} &deg; C</div>
+        <div className="temperature">{weather.main.temp} &deg;C</div>
       </div>
     )
   }
