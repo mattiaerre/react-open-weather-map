@@ -1,6 +1,6 @@
 {
   "name": "react-open-weather-map",
-  "version": "1.0.1",
+  "version": "2.0.0",
   "description": "Yet another React Weather component based on OpenWeatherMap's API",
   "main": "lib/index.js",
   "scripts": {
