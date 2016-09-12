@@ -1,4 +1,12 @@
 body {
   font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
   padding: 2em;
+  background: lightgoldenrodyellow;
+}
+
+.react-open-weather-map {
+  border: 1px solid #999;
+  padding: 1em;
+  display: inline-block;
+  background: white;
 }

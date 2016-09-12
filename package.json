@@ -2,9 +2,12 @@
   "name": "react-open-weather-map",
   "version": "1.0.0",
   "description": "react-open-weather-map",
-  "main": "index.js",
+  "main": "lib/index.js",
   "scripts": {
+    "build": "babel src/OpenWeatherMap.js --out-file lib/index.js",
     "example": "babel-node example.js",
+    "preinstall": "mkdir -p lib",
+    "prepublish": "npm run build",
     "test": "mocha src/ --compilers js:babel-core/register"
   },
   "repository": {
