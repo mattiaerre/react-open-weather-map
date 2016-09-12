@@ -31,14 +31,43 @@ describe('<OpenWeatherMap />', () => {
     })
 
     const mainHeading = `${sample.weather.name}, ${sample.weather.sys.country}`
+
     it(`then it should have a div w/ text "${mainHeading}"`, () => {
-      wrapper.find('#main-heading').should.have.text(mainHeading)
+      wrapper.find('.main-heading').should.have.text(mainHeading)
     })
 
     const day = moment.unix(sample.weather.dt)
     const dayFormat = 'dddd h:mm A'
+
     it(`then it should have a div w/ text "${day.format(dayFormat)}"`, () => {
-      wrapper.find('#day').should.have.text(day.format(dayFormat))
+      wrapper.find('.day').should.have.text(day.format(dayFormat))
+    })
+
+    const description = `${sample.weather.weather[0].description}`
+
+    it(`then it should have a div w/ text "${description}"`, () => {
+      wrapper.find('.description').should.have.text(description)
+    })
+
+    it('then it should have a div w/ an img w/ "src" and "alt" attributes', () => {
+      wrapper.find('.icon img').should.have.attr('src')
+      wrapper.find('.icon img').should.have.attr('alt')
+    })
+
+    const src = `http://openweathermap.org/img/w/${sample.weather.weather[0].icon}.png`
+
+    it(`then the "src" attribute should equal "${src}""`, () => {
+      wrapper.find('.icon img').should.have.attr('src').equal(src)
+    })
+
+    it(`then the "alt" attribute should equal "${description}""`, () => {
+      wrapper.find('.icon img').should.have.attr('alt').equal(description)
+    })
+
+    const temperature = `${sample.weather.main.temp} °C`
+
+    it(`then it should have a div w/ text "${temperature}"`, () => {
+      wrapper.find('.temperature').should.have.text(temperature)
     })
   })
 })
