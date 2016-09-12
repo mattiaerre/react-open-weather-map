@@ -23,7 +23,7 @@ describe('<OpenWeatherMap />', () => {
   })
 
   describe('when rendered w/ and openweathermap current weather data object', () => {
-    const props = { data: sample }
+    const props = { data: sample.weather }
     const wrapper = shallow(<OpenWeatherMap {...props} />)
 
     it('then it should not be empty', () => {

@@ -3,19 +3,18 @@ import moment from 'moment'
 
 const OpenWeatherMap = ({ data }) => {
   if (data) {
-    const weather = data.weather
-    const day = moment.unix(weather.dt)
-    const src = `http://openweathermap.org/img/w/${weather.weather[0].icon}.png`
+    const day = moment.unix(data.dt)
+    const src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
 
     return (
       <div className="react-open-weather-map">
-        <div className="main-heading">{weather.name}, {weather.sys.country}</div>
+        <div className="main-heading">{data.name}, {data.sys.country}</div>
         <div className="day">{day.format('dddd h:mm A') }</div>
-        <div className="description">{weather.weather[0].description}</div>
+        <div className="description">{data.weather[0].description}</div>
         <div className="icon">
-          <img src={src} alt={weather.weather[0].description} />
+          <img src={src} alt={data.weather[0].description} />
         </div>
-        <div className="temperature">{weather.main.temp} &deg;C</div>
+        <div className="temperature">{data.main.temp} &deg;C</div>
       </div>
     )
   }
