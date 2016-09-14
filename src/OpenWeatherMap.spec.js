@@ -16,13 +16,18 @@ describe('<OpenWeatherMap />', () => {
   describe('when rendered w/o data', () => {
     const props = { data: undefined }
     const wrapper = shallow(<OpenWeatherMap {...props} />)
+    const containerClassName = 'react-open-weather-map'
+
+    it(`then it should have className "${containerClassName}"`, () => {
+      wrapper.should.have.className(containerClassName)
+    })
 
     it('then it should be empty', () => {
       wrapper.should.be.empty
     })
   })
 
-  describe('when rendered w/ and openweathermap current weather data object', () => {
+  describe('when rendered w/ an openweathermap current weather data object', () => {
     const props = { data: sample.weather }
     const wrapper = shallow(<OpenWeatherMap {...props} />)
 
@@ -68,6 +73,16 @@ describe('<OpenWeatherMap />', () => {
 
     it(`then it should have a div w/ text "${temperature}"`, () => {
       wrapper.find('.temperature').should.have.text(temperature)
+    })
+  })
+
+  describe('when rendered w/ a config object', () => {
+    const config = { containerClassName: 'container-class-name' }
+    const props = { data: sample.weather, config }
+    const wrapper = shallow(<OpenWeatherMap {...props} />)
+
+    it(`then it should have className "${config.containerClassName}"`, () => {
+      wrapper.should.have.className(config.containerClassName)
     })
   })
 })
