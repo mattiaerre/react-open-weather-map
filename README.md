@@ -73,6 +73,22 @@ Data sample:
 }
 ```
 
+## Config
+
+The component accepts a config object that can be used in order to specify:
+
+name | type | default | description
+--- | --- | --- | ---
+containerClassName | string | 'react-open-weather-map' | the container class name
+
+```javascript
+import OpenWeatherMap from 'react-open-weather-map'
+
+const config = { containerClassName: 'open-weather-map-container-class-name' }
+
+<OpenWeatherMap config={config} />
+```
+
 ## Example
 
 Clone or download this GitHub repository then run the example app using the following npm commands:
