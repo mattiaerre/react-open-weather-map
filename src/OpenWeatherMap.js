@@ -2,13 +2,13 @@ import React, { PropTypes } from 'react'
 import moment from 'moment'
 
 const OpenWeatherMap = ({ data, config }) => {
-  const containerClassName = 'react-open-weather-map'
+  const containerClassName = (config && config.containerClassName) ? config.containerClassName : 'react-open-weather-map'
   if (data) {
     const day = moment.unix(data.dt)
     const src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`
 
     return (
-      <div className={(config && config.containerClassName) ? config.containerClassName : containerClassName}>
+      <div className={containerClassName}>
         <div className="main-heading">{data.name}, {data.sys.country}</div>
         <div className="day">{day.format('dddd h:mm A') }</div>
         <div className="description">{data.weather[0].description}</div>
