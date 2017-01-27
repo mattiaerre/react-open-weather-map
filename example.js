@@ -12,7 +12,7 @@ app.use(express.static('public'))
 app.use(favicon)
 
 app.get('/', (req, res) => {
-  const props = { data: sample }
+  const props = { data: sample.weather }
   const html =
     `
     <!DOCTYPE html>
