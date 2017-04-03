@@ -9,7 +9,7 @@ Yet another **React Weather** component based on [OpenWeatherMap's API](http://o
 Npm install using the following command:
 
 ```
-npm i -S react-open-weather-map
+yarn add react-open-weather-map
 ```
 
 And use it inside your **React** app:
@@ -91,9 +91,9 @@ const config = { containerClassName: 'open-weather-map-container-class-name' }
 
 ## Example
 
-Clone or download this GitHub repository then run the example app using the following npm commands:
+Clone or download this GitHub repository then run the example app using the following yarn commands:
 
 ```
-npm i
-npm run example
+yarn
+yarn example
 ```
