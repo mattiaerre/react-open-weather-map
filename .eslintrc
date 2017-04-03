@@ -1,18 +1,13 @@
 {
     "extends": "airbnb",
-    "installedESLint": true,
-    "plugins": [
-        "react",
-        "jsx-a11y",
-        "import"
-    ],
+    "env": {
+        "browser": true,
+        "jest": true
+    },
     "rules": {
+        "comma-dangle": "off",
         "import/no-extraneous-dependencies": "off",
         "react/forbid-prop-types": "off",
-        "react/jsx-filename-extension": "off",
-        "semi": [
-            "error",
-            "never"
-        ]
+        "react/jsx-filename-extension": "off"
     }
 }
