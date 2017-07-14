@@ -91,7 +91,7 @@ const config = { containerClassName: 'open-weather-map-container-class-name' };
 
 ## Example
 
-Clone or download this GitHub repository then run the example app using the following yarn commands:
+Clone or download this GitHub repository then run the example app using the following npm commands:
 
 ```
 npm i
