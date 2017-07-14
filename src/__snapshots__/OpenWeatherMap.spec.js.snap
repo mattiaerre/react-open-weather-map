@@ -14,7 +14,7 @@ exports[`<OpenWeatherMap /> w data w config 1`] = `
   <div
     className="day"
   >
-    Saturday 2:07 PM
+    Saturday 10:07 PM
   </div>
   <div
     className="description"
@@ -52,7 +52,7 @@ exports[`<OpenWeatherMap /> w data w/o config 1`] = `
   <div
     className="day"
   >
-    Saturday 2:07 PM
+    Saturday 10:07 PM
   </div>
   <div
     className="description"
@@ -79,65 +79,11 @@ exports[`<OpenWeatherMap /> w data w/o config 1`] = `
 exports[`<OpenWeatherMap /> w/o data w config 1`] = `
 <div
   className="container-class-name"
->
-  <div
-    className="main-heading"
-  >
-    , 
-  </div>
-  <div
-    className="day"
-  >
-    Invalid date
-  </div>
-  <div
-    className="description"
-  />
-  <div
-    className="icon"
-  >
-    <img
-      alt={undefined}
-      src="http://openweathermap.org/img/w/undefined.png"
-    />
-  </div>
-  <div
-    className="temperature"
-  >
-     °C
-  </div>
-</div>
+/>
 `;
 
 exports[`<OpenWeatherMap /> w/o data w/o config 1`] = `
 <div
   className="react-open-weather-map"
->
-  <div
-    className="main-heading"
-  >
-    , 
-  </div>
-  <div
-    className="day"
-  >
-    Invalid date
-  </div>
-  <div
-    className="description"
-  />
-  <div
-    className="icon"
-  >
-    <img
-      alt={undefined}
-      src="http://openweathermap.org/img/w/undefined.png"
-    />
-  </div>
-  <div
-    className="temperature"
-  >
-     °C
-  </div>
-</div>
+/>
 `;

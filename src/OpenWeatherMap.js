@@ -2,6 +2,12 @@ import React, { PropTypes } from 'react';
 import moment from 'moment';
 
 const OpenWeatherMap = ({ data, config }) => {
+  if (data === OpenWeatherMap.defaultProps.data) {
+    return (
+      <div className={config.containerClassName} />
+    );
+  }
+
   const day = moment.unix(data.dt);
   const src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
