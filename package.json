@@ -6,7 +6,6 @@
   "scripts": {
     "build": "babel src/OpenWeatherMap.js --out-file lib/index.js",
     "example": "babel-node example.js",
-    "preinstall": "mkdir lib",
     "prepublish": "npm run build",
     "test": "jest --coverage"
   },
