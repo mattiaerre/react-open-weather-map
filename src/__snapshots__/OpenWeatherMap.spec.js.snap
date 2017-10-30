@@ -14,7 +14,7 @@ exports[`<OpenWeatherMap /> w data w config 1`] = `
   <div
     className="day"
   >
-    Saturday 10:07 PM
+    Saturday 2:07 PM
   </div>
   <div
     className="description"
@@ -26,7 +26,7 @@ exports[`<OpenWeatherMap /> w data w config 1`] = `
   >
     <img
       alt="light rain"
-      src="http://openweathermap.org/img/w/10n.png"
+      src="//openweathermap.org/img/w/10n.png"
     />
   </div>
   <div
@@ -52,7 +52,7 @@ exports[`<OpenWeatherMap /> w data w/o config 1`] = `
   <div
     className="day"
   >
-    Saturday 10:07 PM
+    Saturday 2:07 PM
   </div>
   <div
     className="description"
@@ -64,7 +64,7 @@ exports[`<OpenWeatherMap /> w data w/o config 1`] = `
   >
     <img
       alt="light rain"
-      src="http://openweathermap.org/img/w/10n.png"
+      src="//openweathermap.org/img/w/10n.png"
     />
   </div>
   <div

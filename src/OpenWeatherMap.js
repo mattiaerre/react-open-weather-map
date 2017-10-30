@@ -1,4 +1,5 @@
-import React, { PropTypes } from 'react';
+import React from 'react';
+import PropTypes from 'prop-types';
 import moment from 'moment';
 
 const OpenWeatherMap = ({ data, config }) => {
@@ -9,7 +10,7 @@ const OpenWeatherMap = ({ data, config }) => {
   }
 
   const day = moment.unix(data.dt);
-  const src = `http://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const src = `//openweathermap.org/img/w/${data.weather[0].icon}.png`;
 
   return (
     <div className={config.containerClassName}>
@@ -25,7 +26,7 @@ const OpenWeatherMap = ({ data, config }) => {
 };
 
 OpenWeatherMap.propTypes = {
-  data: PropTypes.object.isRequired,
+  data: PropTypes.object,
   config: PropTypes.object,
 };
 
